@@ -113,6 +113,8 @@ def determine_grade(cell, log=None):
             # option 1: error, return 0
             if output.output_type == 'error':
                 return 0, max_points
+
+        for output in cell.outputs:
             # if not error, then check for option 2, partial credit
             if output.output_type == 'execute_result':
                 # is there a single result that can be cast to a float?
