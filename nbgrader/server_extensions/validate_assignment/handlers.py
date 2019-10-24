@@ -34,6 +34,7 @@ class ValidateAssignmentHandler(IPythonHandler):
         config_found = False
         full_config = Config()
         for config in NbGrader._load_config_files("nbgrader_config", path=paths, log=self.log):
+            self.log.warning("XXX config="+str(config))
             full_config.merge(config)
             config_found = True
 
